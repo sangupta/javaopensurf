@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>JOpenSurf</name>
+	<name>jopensurf</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -11,16 +11,13 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
-			<name>org.eclipse.ui.externaltools.ExternalToolBuilder</name>
+			<name>org.eclipse.m2e.core.maven2Builder</name>
 			<arguments>
-				<dictionary>
-					<key>LaunchConfigHandle</key>
-					<value>&lt;project&gt;/.externalToolBuilders/JOpenSurf.launch</value>
-				</dictionary>
 			</arguments>
 		</buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 	</natures>
 </projectDescription>

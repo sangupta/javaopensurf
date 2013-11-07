@@ -1,11 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
 		<artifactId>oss-parent</artifactId>
 		<version>7</version>
 	</parent>
-  
+
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.sangupta</groupId>
@@ -15,19 +16,19 @@
 
 	<name>jopensurf</name>
 	<description>JOpenSurf</description>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		
+
 		<maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
-        <build.timestamp>${maven.build.timestamp}</build.timestamp>
-        <build.number />
+		<build.timestamp>${maven.build.timestamp}</build.timestamp>
+		<build.number />
 	</properties>
-	
+
 	<prerequisites>
-        <maven>3.0.0</maven>
-    </prerequisites>
+		<maven>3.0.0</maven>
+	</prerequisites>
 
 	<dependencies>
 		<dependency>
@@ -66,16 +67,16 @@
 
 			<!-- Generate the project-sources.jar for OSS repository -->
 			<plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>2.1.2</version>
-            </plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
+			</plugin>
 		</plugins>
 	</build>
-	
+
 	<profiles>
 		<profile>
-			<id>release</id>	
+			<id>release</id>
 			<build>
 				<plugins>
 					<!-- Sign the Maven artifacts -->
@@ -91,7 +92,7 @@
 								</goals>
 							</execution>
 						</executions>
-					</plugin>			
+					</plugin>
 				</plugins>
 			</build>
 		</profile>

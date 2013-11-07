@@ -41,8 +41,12 @@ import javax.swing.*;
 
 
 public class SurfCompare extends JPanel {
-	private static final long serialVersionUID = 1L;
 
+	/**
+	 * Generated via Eclipse
+	 */
+	private static final long serialVersionUID = 1433189931871871332L;
+	
 	private static final int BASE_CIRCLE_DIAMETER = 8;
 	private static final int TARGET_CIRCLE_DIAMETER = 4;
 	private static final int UNMATCHED_CIRCLE_DIAMETER = 4;

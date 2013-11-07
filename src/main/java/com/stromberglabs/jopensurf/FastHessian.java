@@ -44,7 +44,10 @@ import org.apache.commons.math3.linear.RealMatrix;
 
 public class FastHessian implements Serializable {
 	
-	private static final long serialVersionUID = 1L;
+	/**
+	 * Generated via Eclipse
+	 */
+	private static final long serialVersionUID = 5739910362000974014L;
 
 	private static int[][] filter_map  = {{0,1,2,3}, {1,3,4,5}, {3,5,6,7}, {5,7,8,9}, {7,9,10,11}};
 	

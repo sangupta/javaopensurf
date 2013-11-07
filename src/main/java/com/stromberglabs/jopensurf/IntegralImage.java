@@ -62,7 +62,11 @@ import java.io.Serializable;
  *
  */
 public class IntegralImage implements Serializable {
-	private static final long serialVersionUID = 1L;
+	
+	/**
+	 * Generated via Eclipse
+	 */
+	private static final long serialVersionUID = -5963845072379276182L;
 	
 	private float[][] mIntImage;
 	private int mWidth = -1;

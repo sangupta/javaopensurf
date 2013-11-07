@@ -34,7 +34,11 @@ import java.io.Serializable;
 import java.util.Arrays;
 
 public class SURFInterestPoint implements Serializable,Cloneable,InterestPoint {
-	private static final long serialVersionUID = 1L;
+
+	/**
+	 * Generated via Eclipse
+	 */
+	private static final long serialVersionUID = 2147514657316322752L;
 
 	private float mX,mY;
 	

@@ -51,7 +51,11 @@ import javax.imageio.ImageIO;
  *
  */
 public class Surf implements Serializable {
-	private static final long serialVersionUID = 1L;
+	
+	/**
+	 * Generated via Eclipse 
+	 */
+	private static final long serialVersionUID = -4469507664723433509L;
 	
 	private static final int HESSIAN_OCTAVES = 5;
 	//private static final int HESSIAN_INTERVALS = 4;

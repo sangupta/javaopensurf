@@ -20,10 +20,22 @@ public class SurfTest {
 	 * @throws Exception
 	 */
 	@Test
-	@Ignore("test in and out is not identical")
+	@Ignore("fails due to class serialization errors")
 	public void testSURFOutput() throws Exception {
-		Surf original = Surf.readFromFile("H:\\workspace\\javaopensurf\\example\\lenna_surf_test.bin");
-		Surf current = new Surf(ImageIO.read(new File("H:\\workspace\\javaopensurf\\example\\lenna.png")));
+		// get classpath
+		String originalFile = this.getClass().getClassLoader().getResource("example/lenna_surf_test.bin").getFile();
+		if(originalFile.startsWith("/")) {
+			originalFile = originalFile.substring(1);
+		}
+		
+		String currentFile = this.getClass().getClassLoader().getResource("example/lenna.png").getFile();
+		if(currentFile.startsWith("/")) {
+			currentFile = currentFile.substring(1);
+		}
+		
+		Surf original = Surf.readFromFile(originalFile);
+		Surf current = new Surf(ImageIO.read(new File(currentFile)));
+		
 		//Surf.saveToFile(current,"H:\\workspace\\javaopensurf\\example\\lenna_surf_test.bin");
 		assertTrue(original.isEquivalentTo(current));
 	}

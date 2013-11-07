@@ -450,20 +450,34 @@ public class Surf implements Serializable {
 	public static Surf readFromFile(String location){
 		File file = new File(location);
 		if (file != null && file.exists()) {
+			ObjectInputStream str = null;
 			try {
-				ObjectInputStream str = new ObjectInputStream(
-						new FileInputStream(file));
-				return (Surf)str.readObject();
+				str = new ObjectInputStream(new FileInputStream(file));
+				return (Surf) str.readObject();
 			} catch (Exception e) {
 				e.printStackTrace();
+			} finally {
+				if(str != null) {
+					try {
+						str.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
 			}
 		}
 		return null;
 	}
 	
 	private void writeObject(ObjectOutputStream out) throws IOException {
-		if ( mFreeOrientedPoints == null ) getFreeOrientedInterestPoints();
-		if ( mUprightPoints == null ) getUprightInterestPoints();
+		if ( mFreeOrientedPoints == null ) {
+			getFreeOrientedInterestPoints();
+		}
+		
+		if ( mUprightPoints == null ) {
+			getUprightInterestPoints();
+		}
+		
 		out.defaultWriteObject();
 	}
 

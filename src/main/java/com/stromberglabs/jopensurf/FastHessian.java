@@ -37,12 +37,13 @@ import java.util.List;
 
 import javax.imageio.ImageIO;
 
-import org.apache.commons.math.linear.Array2DRowRealMatrix;
-import org.apache.commons.math.linear.DecompositionSolver;
-import org.apache.commons.math.linear.LUDecompositionImpl;
-import org.apache.commons.math.linear.RealMatrix;
+import org.apache.commons.math3.linear.Array2DRowRealMatrix;
+import org.apache.commons.math3.linear.DecompositionSolver;
+import org.apache.commons.math3.linear.LUDecomposition;
+import org.apache.commons.math3.linear.RealMatrix;
 
 public class FastHessian implements Serializable {
+	
 	private static final long serialVersionUID = 1L;
 
 	private static int[][] filter_map  = {{0,1,2,3}, {1,3,4,5}, {3,5,6,7}, {5,7,8,9}, {7,9,10,11}};
@@ -192,7 +193,7 @@ public class FastHessian implements Serializable {
 		RealMatrix partialDerivs = getPartialDerivativeMatrix(r,c,t,m,b);
 		RealMatrix hessian3D = getHessian3DMatrix(r,c,t,m,b);
 		
-		DecompositionSolver solver = new LUDecompositionImpl(hessian3D).getSolver();
+		DecompositionSolver solver = new LUDecomposition(hessian3D).getSolver();
 		RealMatrix X = solver.getInverse().multiply(partialDerivs);
 		
 //		System.out.println("X = " + X.getColumnDimension() + " col x " + X.getRowDimension() + " rows");

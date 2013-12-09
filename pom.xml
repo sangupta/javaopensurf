@@ -15,7 +15,9 @@
 	<packaging>jar</packaging>
 
 	<name>jopensurf</name>
-	<description>JOpenSurf</description>
+	<description>JOpenSurf - the Mavenized version</description>
+	<url>http://www.sangupta.com/projects/jopensurf</url>
+	<inceptionYear>2013</inceptionYear>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,6 +27,22 @@
 		<build.timestamp>${maven.build.timestamp}</build.timestamp>
 		<build.number />
 	</properties>
+	
+	<scm>
+		<connection>scm:git:git://github.com/sangupta/jopensurf.git</connection>
+		<developerConnection>scm:git:http://git@github.com/sangupta/jopensurf.git</developerConnection>
+		<url>https://github.com/sangupta/jopensurf</url>
+	</scm>
+	
+	<developers>
+		<developer>
+			<id>sangupta</id>
+			<name>Sandeep Gupta</name>
+			<email>sandy.pec@gmail.com</email>
+			<url>http://www.sangupta.com</url>
+		</developer>
+	</developers>
+
 
 	<prerequisites>
 		<maven>3.0.0</maven>

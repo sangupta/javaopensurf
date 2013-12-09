@@ -25,6 +25,19 @@ Changes in sangupta/jopensurf fork
 * A resource leak has been resolved
 * Removed dependency on com.stromberglabs.commons JAR - the needed interface has been included in this codebase itself.
 
+Maven
+-----
+The latest production release can be found at:
+```xml
+<dependency>
+    <groupId>com.sangupta</groupId>
+    <artifactId>jopensurf</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+This is a Mavenized version of the original project.
+
 License
 -------
 The project follows the original 3 clause BSD license.
